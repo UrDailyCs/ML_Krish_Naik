@@ -1,0 +1,27 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Student Exam Performance Indicator</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Student Exam Performance Prediction</legend>
+        </h1>
+        <input type="text" name="Temperature" placeholder="Temperature required="required /><br>
+        <input type="text" name="RH" placeholder="RH required="required /><br>
+        <input type="text" name="Ws" placeholder="Ws required="required /><br>
+        <input type="text" name="Rain" placeholder="Rain required="required /><br>
+        <input type="text" name="FFMC" placeholder="FFMC required="required /><br>
+        <input type="text" name="DMC" placeholder="DMC required="required /><br>
+        <input type="text" name="ISI" placeholder="ISI required="required /><br>
+        <input type="text" name="Classes" placeholder="Classes required="required /><br>
+        <input type="text" name="Region" placeholder="Region required="required /><br>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict  FWI" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
